@@ -1,11 +1,10 @@
-varA = 5
-varB = 5
-if type(varA) is str  or  type(varA) is str:
-    print("string involved")
-else:
-    if varA > varB:
-        print("bigger")
-    elif varA == varB:
-        print("equal")
-    elif varA < varB:
-        print("smaller")
+def Square(x):
+    return SquareHelper(abs(x), abs(x))
+
+def SquareHelper(n, x):
+    if n == 0:
+        return 0
+    return SquareHelper(n-1, x) + x
+
+# print(type(               print(L[3])              ))
+# print(                    print(L[3])              )
