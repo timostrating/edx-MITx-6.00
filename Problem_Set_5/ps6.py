@@ -34,9 +34,9 @@ def is_word(word_list, word):
     Returns: True if word is in word_list, False otherwise
 
     Example:
-    >>> is_word(word_list, 'bat') returns
+        is_word(word_list, 'bat') returns
     True
-    >>> is_word(word_list, 'asdf') returns
+        is_word(word_list, 'asdf') returns
     False
     '''
     word = word.lower()
@@ -45,9 +45,7 @@ def is_word(word_list, word):
 
 ### DO NOT MODIFY THIS FUNCTION ###
 def get_story_string():
-    """
-    Returns: a joke in encrypted text.
-    """
+    """ Returns: a joke in encrypted text. """
     f = open("story.txt", "r")
     story = str(f.read())
     f.close()
@@ -81,11 +79,8 @@ class Message(object):
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_valid_words(self):
-        '''
-        Used to safely access a copy of self.valid_words outside of the class
-        
-        Returns: a COPY of self.valid_words
-        '''
+        ''' Used to safely access a copy of self.valid_words outside of the class
+        Returns: a COPY of self.valid_words '''
         return self.valid_words[:]
         
     def build_shift_dict(self, shift):
@@ -205,7 +200,15 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        pass #delete this line and replace with your code here
+        counter = 0
+        for i in range(len(string.ascii_lowercase)):
+            for j in list(super(CiphertextMessage, self).apply_shift(i).split(' ')):
+                if is_word(self.valid_words, j):
+                    counter += 1
+                if counter > len(string.ascii_lowercase) / 10:
+                    return (i, super(CiphertextMessage, self).apply_shift(i))
+
+        return None
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
