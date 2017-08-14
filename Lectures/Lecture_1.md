@@ -1,4 +1,4 @@
-#Lecture 1
+# Lecture 1
 Think like a Computer Scientist.
 
 What is computation?
@@ -15,9 +15,9 @@ Repeat
 
 
 
-//////Memory//// //       	INSTRUCTIONS
-      ^  v		 ^ v					//*//**/*/*/
-Controller 	   ALV				  */*///*//*//
+//////Memory//// //    INSTRUCTIONS
+      ^  v		 ^ v			//*//**/*/*/
+Controller 	   	ALV			*/*///*//*//
 
           Input  output
 
@@ -25,10 +25,10 @@ _Program is a set of instructions_
 
 
 
-#Langauge
-High vs Low
-General VS Specific
-Interpeted vs Compiled
+## Langauge
+- High vs Low
+- General VS Specific
+- Interpeted vs Compiled
 
 Compile -> checker -> object code
 
@@ -41,8 +41,8 @@ Semantics - what is the meaning?
 
 
 
-PHYTHON
-Numbers
-Strings
-Expression _ 52 * 7
-Command print _ 52 * 7
+## PHYTHON
+- Numbers
+- Strings
+- Expression _ 52 * 7
+- Command print _ 52 * 7
